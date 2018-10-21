@@ -1,0 +1,13 @@
+C:\Users\Sean\source\repos\OMTC\OMTC\bin\Debug\OMTC.exe.config
+C:\Users\Sean\source\repos\OMTC\OMTC\bin\Debug\OMTC.exe
+C:\Users\Sean\source\repos\OMTC\OMTC\bin\Debug\OMTC.pdb
+C:\Users\Sean\source\repos\OMTC\OMTC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sean\source\repos\OMTC\OMTC\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.csprojResolveAssemblyReference.cache
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.Form1.resources
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.Properties.Resources.resources
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.csproj.GenerateResource.cache
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.csproj.CoreCompileInputs.cache
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.csproj.CopyComplete
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.exe
+C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.pdb
