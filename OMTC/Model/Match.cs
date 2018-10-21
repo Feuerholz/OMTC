@@ -59,7 +59,10 @@ namespace OMTC.Model
                     }
                 
                 map.ComputeTeamScores();
-                Maps.Add(map);
+                if (map.RedScore > 0 || map.BlueScore > 0)
+                {
+                    Maps.Add(map);
+                }
             }
         }
 

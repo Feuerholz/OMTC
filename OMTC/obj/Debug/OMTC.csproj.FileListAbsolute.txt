@@ -11,3 +11,16 @@ C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.csproj.CoreCompileInputs.cac
 C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.csproj.CopyComplete
 C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.exe
 C:\Users\Sean\source\repos\OMTC\OMTC\obj\Debug\OMTC.pdb
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\OMTC.exe.config
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\OMTC.exe
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\Newtonsoft.Json.dll
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\Newtonsoft.Json.xml
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.csprojResolveAssemblyReference.cache
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.Form1.resources
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.Properties.Resources.resources
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.csproj.GenerateResource.cache
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.csproj.CoreCompileInputs.cache
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.csproj.CopyComplete
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.exe
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.pdb
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\OMTC.pdb
