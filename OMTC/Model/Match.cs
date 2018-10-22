@@ -110,6 +110,7 @@ namespace OMTC.Model
         public override string ToString()
         {
             int set = 1;
+            int mapsleft = 7;
             int blueWins = 0;
             int redWins = 0;
             string matchTable = "";
@@ -146,12 +147,23 @@ namespace OMTC.Model
                     redWins++;
                 }
                 matchTable = matchTable + "\n";
+                mapsleft--;
 
                 if(redWins==4 || blueWins == 4)
                 {
+                    while (mapsleft > 1)
+                    {
+                        matchTable = matchTable + "---|---|-----------|-|-|------------|------------\n";
+                        mapsleft--;
+                    }
+                    if (mapsleft == 1)
+                    {
+                        matchTable = matchTable + "TB|---|-----------|-|-|------------|------------\n";
+                    }
                     set++;
                     redWins = 0;
                     blueWins = 0;
+                    mapsleft = 7;
                 }
             }
             return matchTable;

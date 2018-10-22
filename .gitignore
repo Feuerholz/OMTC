@@ -13,3 +13,4 @@ OMTC/bin/Debug/OMTCv0.1.1.zip
 OMTC/bin/Debug/46823678.txt
 .vs/OMTC/v15/Server/sqlite3/storage.ide-wal
 .vs/OMTC/v15/Server/sqlite3/storage.ide-shm
+*.zip
