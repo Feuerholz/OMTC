@@ -11,25 +11,29 @@ namespace OMTC.Model
     public class Match
     {
         List<MatchMap> Maps;
+        List<Set> Sets;
         string RedTeam;
         string BlueTeam;
 
         public Match(string blueTeam, string redTeam)
         {
             this.Maps = new List<MatchMap>();
+            this.Sets = new List<Set>();
             this.RedTeam = redTeam;
             this.BlueTeam = blueTeam;
         }
 
-        public void FillMaps(JArray mJSON)
+        public void FillMaps(JArray matchJSON)
         {
-            for (int i = 0; i < mJSON.Count; i++){
-                JArray mapJSON = APIAccessor.RetrieveMapDataAsync(mJSON[i]["beatmap_id"].ToString()).Result;
-                string mapID = mJSON[i]["beatmap_id"].ToString();
+            Set set = new Set();
+            for (int i = 0; i < matchJSON.Count; i++){                
+                JArray mapJSON = APIAccessor.RetrieveMapDataAsync(matchJSON[i]["beatmap_id"].ToString()).Result;
+                string mapID = matchJSON[i]["beatmap_id"].ToString();
                 string setID = MapIDFromJArray(mapJSON);
                 string mapName = MapNameFromJArray(mapJSON, mapID);
-                MatchMap map = new MatchMap(mapID, setID, mapName);
-                    JArray scoreArray = (JArray)mJSON[i]["scores"];
+                Mod mapMod = MapModsFromJArray(matchJSON, i);
+                MatchMap map = new MatchMap(mapID, setID, mapName, mapMod);
+                    JArray scoreArray = (JArray)matchJSON[i]["scores"];
                     for (int k = 0; k < scoreArray.Count; k++)
                     {
                         int score = Int32.Parse(scoreArray[k]["score"].ToString());
@@ -62,6 +66,19 @@ namespace OMTC.Model
                 if (map.RedScore > 0 || map.BlueScore > 0)
                 {
                     Maps.Add(map);
+                    if (map.RedScore > map.BlueScore)
+                    {
+                        set.RedWin();
+                    }
+                    else
+                    {
+                        set.BlueWin();
+                    }
+                    if(set.BlueScore == 4 || set.RedScore == 4)
+                    {
+                        Sets.Add(set);
+                        set = new Set();
+                    }
                 }
             }
         }
@@ -69,6 +86,13 @@ namespace OMTC.Model
         public string MapIDFromJArray(JArray mapJSON)
         {
             return mapJSON[0]["beatmapset_id"].ToString();
+        }
+
+        public Mod MapModsFromJArray(JArray matchJSON, int i)
+        {
+            string modsAsString = matchJSON[i]["mods"].ToString();
+            int mods = Int32.Parse(modsAsString);
+            return (Mod)mods;
         }
 
         public string MapNameFromJArray(JArray mapJSON, string mapID)
@@ -99,7 +123,7 @@ namespace OMTC.Model
                 {
                     matchTable = matchTable + "#Set " + set.ToString() + "\n \n";
 
-                    matchTable = matchTable + "Mod|Map | " + BlueTeam + " | x | x | " + RedTeam + " | Point Difference\n"
+                    matchTable = matchTable + "Mod|Map | " + BlueTeam + " | " + Sets.ElementAt(set-1).BlueScore +" | " + Sets.ElementAt(set-1).RedScore + " | " + RedTeam + " | Point Difference\n"
                         + "---|---|-----------|------------|------------|-----------|----------------\n";
                 }
                 //Add mods

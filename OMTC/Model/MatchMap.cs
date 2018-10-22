@@ -21,14 +21,16 @@ namespace OMTC.Model
         public Mod Mod;
         
 
-        public MatchMap(string mapID, string setID, string mapName)
+        public MatchMap(string mapID, string setID, string mapName, Mod mod)
         {
             this.mapID = mapID;
+            this.setID = setID;
             this.BlueScore = 0;
             this.RedScore = 0;
             this.mapName = mapName;
             scores = new List<PlayerScore>();
             this.mapLink = "http://osu.ppy.sh/b/" + mapID;
+            this.Mod = mod;
         }
 
         public void AddScore(PlayerScore score)

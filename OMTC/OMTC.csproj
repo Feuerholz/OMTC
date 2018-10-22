@@ -59,6 +59,7 @@
     <Compile Include="Model\MatchMap.cs" />
     <Compile Include="Model\Mod.cs" />
     <Compile Include="Model\PlayerScore.cs" />
+    <Compile Include="Model\Set.cs" />
     <Compile Include="Model\Team.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
