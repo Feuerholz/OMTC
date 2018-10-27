@@ -80,7 +80,14 @@ namespace OMTC.Model
                         set = new Set();
                     }
                 }
-            }
+                if (i == matchJSON.Count - 1)
+                {
+                    if(set.BlueScore!=0  || set.RedScore != 0)           //handle unfinished sets that can happen due to disconnects etc
+                    {
+                        Sets.Add(set);                           
+                    }
+                }
+            }            
         }
 
         public string MapIDFromJArray(JArray mapJSON)
