@@ -24,3 +24,4 @@ D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.csproj.CopyComplete
 D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.exe
 D:\Users\Ham\Documents\GitHub\OMTC\OMTC\obj\Debug\OMTC.pdb
 D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\OMTC.pdb
+D:\Users\Ham\Documents\GitHub\OMTC\OMTC\bin\Debug\OMP.dll

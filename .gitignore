@@ -14,3 +14,12 @@ OMTC/bin/Debug/46823678.txt
 .vs/OMTC/v15/Server/sqlite3/storage.ide-wal
 .vs/OMTC/v15/Server/sqlite3/storage.ide-shm
 *.zip
+OMTC/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+OMTC/obj/Debug/OMTC.csproj.CoreCompileInputs.cache
+OMTC/obj/Debug/OMTC.csproj.FileListAbsolute.txt
+OMTC/obj/Debug/OMTC.csproj.GenerateResource.cache
+OMTC/obj/Debug/OMTC.csprojResolveAssemblyReference.cache
+OMTC/obj/Debug/OMTC.exe
+OMTC/obj/Debug/OMTC.pdb
+OMTC/bin/Debug/OMP.dll
+*.cache

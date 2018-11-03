@@ -1,4 +1,11 @@
-# OMTC
-Generates a reddit-formated table with map info from an osu! MP link. Currently only works for the specific format of Corsace Open. The table is output into a txt file in the same directory as the executable.
+# OMTC (osu! Match Thread Creator)
+Generates text to be used as a base for osu! tournament match threads on reddit. Uses [OMP](https://github.com/Feuerholz/OMP) for API Access.
 
-IMPORTANT: This program is unable to distinguish FM from NM as the API does not return the necessary information to determine that.
+Currently supports only the specific format of Corsace Open 2018. The following parts need to be added/replaced manually (or deleted if not desired):
+
+-Corsace website match link
+-Chat log link
+-Bans
+-FreeMod picks (shown as NM due to API limitations)
+-Picks that weren't played
+-Pick Order

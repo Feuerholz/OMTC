@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OMTC.Model;
+using OMP;
+using OMP.Model;
 using Newtonsoft.Json.Linq;
 using System.IO;
 
@@ -23,12 +24,12 @@ namespace OMTC
         private void button1_Click(object sender, EventArgs e)
         {
             APIAccessor.ApiKey = apikeybox.Text;
-            Match match = new Match(blueteambox.Text, redteambox.Text);
+            Match match = new Match(blueteambox.Text, redteambox.Text, matchidbox.Text);
             JArray matchJSON = APIAccessor.RetrieveMatchDataAsync(matchidbox.Text).Result;
             match.FillMaps(matchJSON);
             string tablepath = "./" + matchidbox.Text + ".txt";
             StreamWriter file = new StreamWriter(@tablepath);
-            file.Write(match.ToString());
+            file.Write(CorsaceOpen2018ThreadCreator.CreateThreadText(match));
             file.Close();
         }
     }
