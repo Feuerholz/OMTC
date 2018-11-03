@@ -106,9 +106,8 @@ namespace OMTC
             foreach (Set set in match.Sets)                                                                                         
             {
                 i++;
-                output = output + "Set " + i + ": " + set.BlueScore + "-" + set.RedScore + "\n";
+                output = output + "Set " + i + ": " + set.BlueScore + "-" + set.RedScore + "\n\n";
             }
-            output = output + "\n";
 
             output = output + "[Match Page](https://open.corsace.io/match/bracket/XX) \n\n";             //add template for match page link
 
@@ -121,8 +120,8 @@ namespace OMTC
 
             //add dividers and team links
             output = output + "---\n";
-            output = output + "Link: [" + match.BlueTeam + "'s Roster](https://open.corsace.io/team/" + match.BlueTeam.Replace(' ', '-') + "/)\n\n";
-            output = output + "Link: [" + match.RedTeam + "'s Roster](https://open.corsace.io/team/" + match.RedTeam.Replace(' ', '-') + "/)\n\n";
+            output = output + "Link: [" + match.BlueTeam + "'s Roster](https://open.corsace.io/team/" + match.BlueTeam.Replace(' ', '-') + ")\n\n";
+            output = output + "Link: [" + match.RedTeam + "'s Roster](https://open.corsace.io/team/" + match.RedTeam.Replace(' ', '-') + ")\n\n";
 
             //add dividers, mp link, and chat log link template
             output = output + "---\n";
