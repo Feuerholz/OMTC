@@ -92,21 +92,21 @@ namespace OMTC
             string output = "";
 
             //bold name of winner team
-            if (match.RedScore > match.BlueScore)                                                                                   
+            if (match.RedScore > match.BlueScore)
             {
-                output += "##" + match.BlueTeam + " " + match.BlueScore + "-" + match.RedScore + " " + "**" + match.RedTeam + "**" +"\n";
+                output += "##" + match.BlueTeam + " | " + match.BlueScore + "-" + match.RedScore + " | " + "**" + match.RedTeam + "**" + "\n";
             }
             else
             {
-                output += "##" + "**" + match.BlueTeam + "**" + " " + match.BlueScore + " -" + match.RedScore +  " " + match.RedTeam + "\n";
+                output += "##" + "**" + match.BlueTeam + "**" + " | " + match.BlueScore + "-" + match.RedScore + " | " + match.RedTeam + "\n";
             }
 
             //Add set scores
             int i = 0;
-            foreach (Set set in match.Sets)                                                                                         
+            foreach (Set set in match.Sets)
             {
                 i++;
-                output = output + "Set " + i + ": " + set.BlueScore + "-" + set.RedScore + "\n\n";
+                output = output + "Set " + i + ": " + set.BlueScore + "-" + set.RedScore + " \n\n";
             }
 
             output = output + "[Match Page](https://open.corsace.io/match/bracket/XX) \n\n";             //add template for match page link
